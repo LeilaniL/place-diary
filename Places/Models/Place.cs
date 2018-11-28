@@ -8,9 +8,10 @@ namespace PlaceDiary.Models
         private int _id;
         private static List<Place> _instances = new List<Place> { };
 
-        public Place(string cityName)
+        public Place(string cityName, string description)
         {
             _cityName = cityName;
+            _description = description;
             _instances.Add(this);
             _id = _instances.Count;
         }

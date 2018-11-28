@@ -11,6 +11,7 @@
 {
   @foreach (Place place in Model)
   {
-    <li>@place.GetCityName()</li>
+    <li>@place.GetCityName() @place.GetDescription()</li>
   }
 }
+<a href="/new">Go back and add more places.</a>

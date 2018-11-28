@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using PlaceDiary.Models;
-using System;
+
 
 namespace PlaceDiary.Controllers
 
@@ -21,10 +21,9 @@ namespace PlaceDiary.Controllers
             return View();
         }
         [HttpPost("/place")]
-        public ActionResult Create(string cityName)
+        public ActionResult Create(string cityName, string description)
         {
-            Place myCity = new Place(cityName);
-            Console.WriteLine(myCity.GetCityName());
+            Place myCity = new Place(cityName, description);
             return RedirectToAction("PlaceDiary");
         }
 
